@@ -3,6 +3,15 @@
 }
 body {
   margin: 0;
+
+  background-color: burlywood;
+  color: rgb(61, 51, 38);
+}
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 header {
   display: flex;
@@ -11,8 +20,6 @@ header {
   align-items: center;
   padding: 0 2% 0 2%;
   margin: 0;
-  position: sticky;
-  top: 0;
   background-color: white;
   box-shadow: 0px 0px 5px black;
 }
@@ -21,7 +28,7 @@ header h1 {
 }
 
 #filterholder {
-  padding: 1%;
+  padding: 1% 1% 1% 2%;
   display: flex;
   flex-direction: column;
   align-items: top;
@@ -33,26 +40,42 @@ header h1 {
 }
 #cardholder {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 0px;
-  gap: 50px;
-  padding: 3%;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0% 0% 3% 0%;
   border: 0px solid black;
 }
 figure {
   padding: 0;
   display: flex;
+  border-radius: 10px;
   border: 0px solid black;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: 0 0 10px black;
+  background-color: white;
 }
 figure div {
   margin: 0;
   padding: 5%;
 }
 figure img {
-  width: 200px;
+  width: 140px;
+  box-shadow: 0 0 5px;
   height: auto;
-  margin: 0;
+  margin: 2%;
+  object-fit: contain;
+}
+#training {
+  display: flex;
+  justify-content: center;
+  max-width: 100%;
+  padding: 5%;
+  margin: 2%;
+}
+#training div {
+  max-width: 35%;
+  margin: 5%;
+}
+iframe {
+  box-shadow: 0 0 10px;
 }
 footer {
   padding: 2%;
@@ -62,4 +85,16 @@ footer {
 }
 .hide {
   display: none;
+}
+@media screen and (max-width: 768px) {
+  #cardholder {
+    grid-template-columns: 1fr;
+  }
+  #training div {
+    max-width: 90%;
+  }
+  #training {
+    flex-wrap: wrap;
+    padding: 2%;
+  }
 }
