@@ -1,16 +1,37 @@
-let cards = document.querySelectorAll("figure");
+const cards = document.querySelectorAll("figure");
 
-butt.addEventListener("change", function () {
+after.addEventListener("change", function () {
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].dataset.year < 2000) {
-      cards[i].classList.toggle("hide");
+      cards[i].classList.add("hide");
+    }
+    if (
+      (after.checked == true && before.checked == true) ||
+      (after.checked == false && before.checked == false)
+    ) {
+      cards[i].classList.remove("hide");
     }
   }
 });
-butt2.addEventListener("change", function () {
+before.addEventListener("change", function () {
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].dataset.year > 2000) {
-      cards[i].classList.toggle("hide");
+      cards[i].classList.add("hide");
     }
+    if (
+      (after.checked == true && before.checked == true) ||
+      (after.checked == false && before.checked == false)
+    ) {
+      cards[i].classList.remove("hide");
+    }
+  }
+});
+
+filterButton.addEventListener("click", function () {
+  filterholder.classList.toggle("hide");
+  if (filterButton.innerHTML == "Open Filter") {
+    filterButton.innerHTML = "Close Filter";
+  } else {
+    filterButton.innerHTML = "Open Filter";
   }
 });
