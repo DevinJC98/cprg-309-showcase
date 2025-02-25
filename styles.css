@@ -1,22 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Yatra+One&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  background-color: #1f1f1f;
+  background-color: #111111;
   color: white;
-}
-
-main {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
+  font-size: 1rem;
 }
 
 header {
@@ -34,19 +27,20 @@ header {
 
 header h1 {
   font-family: "Yatra One", Helvetica, sans-serif;
-  font-size: 2rem;
+  font-size: 2.3rem;
 }
+
 header div {
   display: flex;
   align-items: center;
   width: 100%;
   justify-content: space-between;
 }
+
 header button {
   font-size: 1.3rem;
   background-color: white;
   padding: 0.7%;
-  border-radius: 5px;
   font-family: "Yatra One", Helvetica, sans-serif;
   box-shadow: 0px 0px 5px black;
 }
@@ -57,12 +51,20 @@ header section {
   align-items: center;
   padding: 0% 2% 2% 2%;
   align-items: top;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 #filterholder h2 {
   text-decoration: underline;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  font-family: "Plus Jakarta Sans", Helvetica, sans-serif;
 }
 
 #cardholder {
@@ -75,9 +77,8 @@ header section {
 figure {
   padding: 0;
   display: flex;
-  border-radius: 10px;
   border: 0px solid black;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 5px white;
   background-color: white;
   color: black;
   transition: 0.3s;
@@ -89,22 +90,28 @@ figure div {
 }
 
 figure img {
-  width: 140px;
-  box-shadow: 0 0 5px;
+  width: 25%;
   height: auto;
   margin: 2%;
   object-fit: contain;
 }
+
 figure:hover {
   scale: 1.05;
-  border: 3px solid rgb(162, 0, 0);
-  box-shadow: 0px 0px 10px rgb(162, 0, 0);
+  box-shadow: 0px 0px 10px white;
 }
 
 figcaption {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  line-height: 2rem;
+}
+
+figure span {
+  font-size: 1.2rem;
+}
+
+figure p {
+  font-size: 1.1rem;
 }
 
 #training {
@@ -135,11 +142,69 @@ footer {
   display: none;
 }
 
+@media screen and (max-width: 1440px) {
+  figcaption {
+    font-size: 1.3rem;
+  }
+
+  figure span {
+    font-size: 1.1rem;
+  }
+
+  figure p {
+    font-size: 0.9rem;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   #cardholder {
     grid-template-columns: 1fr;
   }
+
   #training div {
-    max-width: 90%;
+    max-width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 1.3rem;
+  }
+
+  header button {
+    font-size: 0.9rem;
+    padding: 0.5%;
+  }
+
+  #filterholder h2 {
+    font-size: 1rem;
+  }
+
+  #filterholder label {
+    font-size: 0.9rem;
+  }
+
+  #cardholder {
+    padding: 0;
+  }
+
+  figure {
+    margin: 3%;
+  }
+
+  figure img {
+    width: 35%;
+  }
+
+  figcaption {
+    font-size: 1rem;
+  }
+
+  figure span {
+    font-size: 0.9rem;
+  }
+
+  figure p {
+    font-size: 0.7rem;
   }
 }

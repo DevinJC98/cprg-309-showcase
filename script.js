@@ -1,28 +1,16 @@
 const cards = document.querySelectorAll("figure");
 
-after.addEventListener("change", function () {
+before.addEventListener("change", function () {
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].dataset.year < 2000) {
-      cards[i].classList.add("hide");
-    }
-    if (
-      (after.checked == true && before.checked == true) ||
-      (after.checked == false && before.checked == false)
-    ) {
-      cards[i].classList.remove("hide");
+      cards[i].classList.toggle("hide");
     }
   }
 });
-before.addEventListener("change", function () {
+after.addEventListener("change", function () {
   for (let i = 0; i < cards.length; i++) {
     if (cards[i].dataset.year > 2000) {
-      cards[i].classList.add("hide");
-    }
-    if (
-      (after.checked == true && before.checked == true) ||
-      (after.checked == false && before.checked == false)
-    ) {
-      cards[i].classList.remove("hide");
+      cards[i].classList.toggle("hide");
     }
   }
 });
